@@ -1,0 +1,38 @@
+html{
+	height:100%;
+	margin:0;
+	padding:0;
+}
+body{
+	height:100%;
+	padding:0;
+	margin-top:50px;
+}wrapper{
+	min-height:100%;
+	position:relative;
+}
+#plc{
+	margin-top:50px;
+}
+
+#box{
+	margin-top:40px;
+	margin-right:50px;
+	margin-bottom:10px;
+	margin-left:5px;
+}#profile{
+	border:15px;
+}
+#footer{
+	height:140px;
+	width:100%;
+	background-color:#DEE2E3;
+	left:5px;
+	bottom:0px;
+	clear:both;
+	margin-top:250px;
+	padding-top:10px;
+			
+			}
+	
+}
