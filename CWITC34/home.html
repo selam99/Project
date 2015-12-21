@@ -1,0 +1,78 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Home Page </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+       <link type="text/css" rel="stylesheet" href="home.css">
+    <script src="http://code.jquery.com/jquery-1.8.3.js"> </script>
+    <script>
+        $(document).ready(function () {
+            getTheData();
+        });
+
+        function getTheData() {
+            $.ajax({
+            //live server call
+                url: "eligiblityjson.aspx",
+                success: function (result) {
+                    var eligiblity = JSON.parse(result);
+                    console.log(eligiblity);
+                    $("#items").empty();
+                    $('#items').append("<table class='mytable'><tr><th>Patient name</th><th>Patient name</th><th>Patient name</th></tr></table>");
+                    $("#btn,#rad,#ph").hide();
+                    $.each(eligiblity.Records, function (i, item) {
+                        $('#items').append('<div class=patient-name>' + item.patient_dob + '</div>');
+                        $('#items').append('<div class=patient-name>' + item.subscriber_name + '</div>');
+
+                    });
+                }
+            });
+        }
+    </script>
+
+
+     
+</head>
+<body>
+    <center>
+        <img src="https://myteamcare.org/ups/img/headerLogos2.jpg" width="300" alt="My TeamCare"><img>
+        <button type="button" class="btn btn-primary btn-small" onclick="Logout()"> Log out </button>
+        <h1 style="color:green"> Welcome Provider! </h1>
+        <div class="checkbox-inline" id="rad">
+            <label class="checkbox-inline"><input type="radio" value="" > Medical</label>
+            <label class="checkbox-inline"><input type="radio" value="" > Dental </label><br>
+        </div>
+        <div id="PH">
+            <input placeholder=" Put Member ID " type="text"><input><br>
+        </div>
+        
+        <div class="container" id="btn">
+            <button type="button" id="elig" class="btn btn-primary btn-block" onclick="getTheData()">Search Eligiblity</button><br>
+            <button type="button" id="bene" class="btn btn-primary btn-block"> Search Benefit</button><br>
+            <button type="button" id="clai" class="btn btn-primary btn-block">Search Claims </button>
+            <br>
+            <br>
+        </div>
+    </center>
+    
+    <br>
+    <div>
+        <center>
+            <ul class="nav nav-pills" id="pill">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="https://myteamcare.org/">TeamCare</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="https://myteamcare.org/faqs.aspx">FAQs</a></li>
+                <li><a href="#">Forms</a></li>
+            </ul>
+        </center>
+    </div>
+
+    <div id="items"> </div>
+
+</body>
+</html>

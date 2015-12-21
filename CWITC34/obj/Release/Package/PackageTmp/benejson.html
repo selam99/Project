@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script>
+        $(document).ready(function () {
+		  getTheData();
+        });
+
+	function getTheData(){
+	//live server call
+    $.ajax({
+               url: "benejson.aspx",
+               success: function (result) {
+               var j = JSON.parse(result);
+	        console.log(j);
+               }
+            });
+	//server stub
+	console.log(serverStub);
+
+
+}
+        /*serverStub ={
+    benefit: [
+    {
+    1: "10416"
+    },
+    {
+    2: "10417"
+    },
+    {
+    3: "10418"
+    },
+    {
+    4: "10419"
+    },
+    {
+    5: "10420"
+    }
+    ]
+    }
+    </script>
+
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    Plese work !
+</body>
+</html>

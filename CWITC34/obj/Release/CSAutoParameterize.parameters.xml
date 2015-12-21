@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="slm-Web.config Connection String" description="slm Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:nsf94vmryj.database.windows.net,1433;Database=selam;User ID=dbdevuser@nsf94vmryj;Password=!314970o;Trusted_Connection=False;Encrypt=True;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Selam\ Gabretinsaye\\documents\\visual\ studio\ 2015\\Projects\\CWITC34\\CWITC34\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='slm']/@connectionString" />
+  </parameter>
+</parameters>

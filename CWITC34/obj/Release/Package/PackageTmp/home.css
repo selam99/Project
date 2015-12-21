@@ -1,0 +1,117 @@
+﻿#btn {
+	margin-top:100px;
+}
+#pill{
+	margin-top:0px;
+}
+#rad{
+	margin-top:50px;
+}
+
+
+.patient-name {
+    color:blue;
+}
+	
+	$(document).ready(function () {
+            getTheData();
+        });
+
+        function getTheData() {
+            //live server call
+            $.ajax({
+                url: "eligiblityjson.aspx",
+                success: function (result) {
+                    var eligiblity = JSON.parse(result);
+                    console.log(eligiblity);
+                    $("#items").empty();
+                    $('#items').append("<table class='mytable'><tr><th>Patient name</th><th>Patient name</th><th>Patient name</th></tr></table>");
+                    $("#btn,#rad,#ph").hide();
+                    $.each(eligiblity.Records, function (i, item) {
+                        $('.myTable').append('<tr id= ><tr>');
+                        $('#items').append('<div class=patient-name>' + item.patient_dob + '</div>');
+                        $('#items').append('<div class=patient-name>' + item.subscriber_name + '</div>');
+
+                    });
+                }
+            });
+        }
+    </script>
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

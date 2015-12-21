@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<title> Login </title>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="login.js"></script>
+    <link type="text/css" rel="stylesheet" href="home.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <center>
+        <img src='csflogo.png' width="200px">    <button type="button" class="btn btn-primary"> Logout</button>
+
+
+    </center>
+    <style>
+        body {
+            background: url("loginbackground.jpg");
+            background-size: 900px 570px;
+            background-repeat: no-repeat;
+        }
+
+        background {
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" width="30px">
+                            Secure Login
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="container">
+
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="usr">Username:</label>
+                                    <input type="text" class="form-control" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="password">
+                                </div>
+                            </form>
+                        </div>
+                        <br>
+                        <input type="button" class="btn btn-primary btn-small" value="Login" align="right" onClick="clicked()"><br>
+                        <a href="https://myteamcare.org/retrieve_username.aspx">Forgot User Name</a>/
+                        <a href="https://myteamcare.org/reset_password.aspx">Password</a><br>
+                    </div>
+                </div>
+            </div>
+    </center>
+    <footer>
+        <div id="wraper">
+            <div id="footer">
+                </br>
+                </br>
+
+                <center>
+
+                    </br>
+                    </br>
+                    <br>
+                    <br>
+                    </br>
+                    </br>
+                    <a href="https://myteamcare.org/faqs.aspx"> FAQs </a> | <a href="https://myteamcare.org/search.aspx?q=privacy"> Privacy </a> | <a href="https://myteamcare.org/search.aspx?q=info"> Info </a>
+
+                    <p style="color:#030302">
+                        TeamCare is a Central States health plan offering medical insurance, dental insurance, vision insurance, and life insurance.
+                        TeamCare - 9377 W. Higgins Road, Rosemont, IL 60018.
+                    </p>
+
+                </center>
+
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

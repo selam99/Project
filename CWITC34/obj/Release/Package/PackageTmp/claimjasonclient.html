@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script>
+        $(document).ready(function () {
+		  getTheData();
+        });
+
+	function getTheData(){
+	//live server call
+    $.ajax({
+               url: "claimjson.aspx",
+               success: function (result) {
+               var j = JSON.parse(result);
+	        console.log(j);
+               }
+            });
+	//server stub
+	console.log(serverStub);
+
+
+}
+	/*serverStub = {
+	    Records: [
+        {
+            1: "9876"
+        },
+        {
+            2: "9875"
+        },
+        {
+            3: "9874"
+        },
+        {
+            4: "9873"
+        },
+        {
+            5: "9872"
+        }
+	    ]
+	}
+    </script>
+
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+Plese work !
+</body>
+</html>
